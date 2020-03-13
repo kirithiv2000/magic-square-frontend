@@ -1,24 +1,17 @@
 import React from 'react';
 
 class Drop  extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            list:this.props.props,
+        }
+    }
     render(){
-        return(<div>
-            Magic Square of 3x3
-            <div className="navbar">
-               
-                <div className="dropdown">
-                    <button className="dropbtn">Menu
-                    <i className="fa fa-caret-down"></i>
-                    </button>
-                    <div className="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                    </div>
-                </div> 
-                </div>
-                </div>
-        )
+    return (<div className="top">{this.state.list.map((e)=><div className="card" key={e} > <div
+    onClick={e=>this.props.func(e)}
+     className="container"><div className={e}>{e}</div></div></div>)}
+     </div>)
     }
 }
 
