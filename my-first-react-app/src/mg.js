@@ -1,10 +1,8 @@
 import React from 'react';
 
 function Mg(props){
-    var list=[]
-    // for (var i=0;i )
     return(
-    <div className='Hello-div'>
+    <div className='Hello-div' style={{"padding": 20}}>
         <table>
             <tbody>
             {
